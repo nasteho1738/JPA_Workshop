@@ -8,8 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {
-   Optional <AppUser> findByUsername(String username);
-   List<AppUser> findAllByRegDateBetween(LocalDate startDate, LocalDate endDate);
-   List<AppUser> findByUserDetailId(Long Details_Id);
-   Optional<AppUser> findByEmailIgnoreCase(String email);
+    Optional<AppUser> findByUsername(String username);
+
+    List<AppUser> findAllByRegDateBetween(LocalDate startDate, LocalDate endDate);
+
+    List<AppUser> findByUserDetails_Id(Long detailsId);
+
+    Optional<AppUser> findByUserDetails_EmailIgnoreCase(String email);
 }

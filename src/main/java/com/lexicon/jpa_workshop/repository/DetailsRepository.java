@@ -10,7 +10,9 @@ import java.util.Optional;
 @Repository
 public interface DetailsRepository extends JpaRepository<Details, Long> {
     Optional<Details> findByEmail(String email);
+
     List<Details> findByNameContaining(String name);
+
     List<Details> findByNameContainingIgnoreCase(String name);
 
 }
