@@ -24,8 +24,13 @@ public class Details {
     @Column (name = "birth_day")
     private LocalDate birthDay;
 
-    public Details(String email, String name) {
+    public Details(String email, String name, LocalDate birthDay) {
         this.email = email;
         this.name = name;
+        this.birthDay = birthDay;
     }
+
+    public void setAppUser(AppUser appUser) {
+    }
+
 }

@@ -15,4 +15,8 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     List<AppUser> findByUserDetails_Id(Long detailsId);
 
     Optional<AppUser> findByUserDetails_EmailIgnoreCase(String email);
+
+    List<AppUser> findByRegDateBetween(LocalDate startDate, LocalDate endDate);
+
+    AppUser findByDetails_Id(long id);
 }

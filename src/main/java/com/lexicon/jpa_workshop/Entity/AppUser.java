@@ -26,5 +26,11 @@ public class AppUser {
     @JoinColumn(name = "details_id")
     private Details userDetails;
 
+    public AppUser(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
+    public void setUserDetails() {
+    }
 }
