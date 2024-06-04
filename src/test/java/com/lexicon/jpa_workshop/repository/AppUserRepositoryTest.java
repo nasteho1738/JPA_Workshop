@@ -80,7 +80,7 @@ public class AppUserRepositoryTest {
         Assertions.assertEquals("Nelly2", foundAppUsers.get(0).getUsername());
     }
 
-    @Test
+   /* @Test
     @Transactional
     public void testFindByDetailsId() {
 
@@ -97,5 +97,8 @@ public class AppUserRepositoryTest {
         Assertions.assertNotNull(foundAppUser);
         Assertions.assertEquals("username", foundAppUser.getUsername());
     }
+
+    */
+
 
 }

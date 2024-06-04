@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,6 +26,8 @@ public class AppUser {
     @OneToOne
     @JoinColumn(name = "details_id")
     private Details userDetails;
+    @OneToMany(mappedBy = "borrower")
+    private List<BookLoan> bookLoans;
 
     public AppUser(String username, String password) {
         this.username = username;
