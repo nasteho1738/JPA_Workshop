@@ -2,11 +2,13 @@ package com.lexicon.jpa_workshop.repository;
 
 import com.lexicon.jpa_workshop.Entity.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     Optional<AppUser> findByUsername(String username);
 
@@ -18,5 +20,5 @@ public interface AppUserRepository extends JpaRepository<AppUser, Long> {
 
     List<AppUser> findByRegDateBetween(LocalDate startDate, LocalDate endDate);
 
-    AppUser findByDetails_Id(long id);
+    AppUser findByUserDetails_Id(long id);
 }
