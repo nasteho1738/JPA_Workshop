@@ -24,7 +24,7 @@ public class Book {
     private String isbn;
     private int maxLoanDays;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
     private Set<BookLoan> bookLoans = new HashSet<>();
 
     public Book(String theBook, String testBook, String s, int i, LocalDate now, LocalDate localDate) {
